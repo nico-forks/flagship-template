@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   image: {
     borderRadius: 5,
     width: '100%',
-    height: '200'
+    height: 175
   },
   pageIndicator: {
     position: 'absolute',
