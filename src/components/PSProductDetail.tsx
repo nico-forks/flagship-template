@@ -557,7 +557,7 @@ class PSProductDetailComponent extends Component<
         {options.map((option, index) => {
           const defaultOption = find(optionValues, { name: option.id });
 
-          if (Array.isArray(option.values) && option.values.length === 1) {
+          if (Array.isArray(option.values) && option.values.length === 0) {
             return null;
           }
 
