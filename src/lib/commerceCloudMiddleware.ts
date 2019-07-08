@@ -1,4 +1,6 @@
 import { CommerceTypes } from '@brandingbrand/fscommerce';
+import { Dictionary } from '@brandingbrand/fsfoundation';
+import { DemandwareTypes } from '@brandingbrand/fssalesforce';
 
 export const commerceCloudMiddleware = {
   fetchCategory: (data: any, normalized: CommerceTypes.Category): CommerceTypes.Category => {
@@ -25,5 +27,45 @@ export const commerceCloudMiddleware = {
     }
 
     return normalized;
+  },
+  fetchCart: (
+    data: DemandwareTypes.BasketWithProductDetails,
+    normalized: CommerceTypes.Cart
+  ): CommerceTypes.Cart => {
+    if (!Array.isArray(data.product_details) || !Array.isArray(normalized.items)) {
+      return normalized;
+    }
+
+    const indexedItems = data.product_details.reduce<Dictionary<CommerceTypes.Product>>(
+      (dict, prod) => ({...dict, [prod.id]: prod})
+    , {});
+
+    return {
+      ...normalized,
+      items: normalized.items.map(item => {
+        const variant = (indexedItems[item.productId].variants || [])
+          .find(variant => variant.id === item.productId);
+
+        if (!variant) {
+          return item;
+        }
+
+        const optionVals = variant.optionValues.reduce<Dictionary<string>>((vals, val) => {
+          return {
+            ...vals,
+            [val.name]: val.value
+          };
+        }, {});
+
+        return {
+          ...item,
+          options: (indexedItems[item.productId].options || []).map(option => ({
+            ...option,
+            values: option.values.filter(({ value }) => value === optionVals[option.id])
+          }))
+        };
+      })
+    };
   }
 };
+
