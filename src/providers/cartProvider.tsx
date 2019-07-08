@@ -8,7 +8,6 @@ import { CommerceTypes } from '@brandingbrand/fscommerce';
 import { CombinedStore } from '../reducers';
 import { connect } from 'react-redux';
 import Analytics, { mapProductToAnalytics } from '../lib/analytics';
-import EpiserverDataSource from '../lib/EpiserverDataSource';
 
 export interface CartStateProps {
   cart: {
@@ -46,29 +45,22 @@ function mapDispatchToProps(dispatch: any, ownProps: any): CartActionProps {
     addToCart: async (product, quantity, variant) => {
       dispatch({ type: SET_CART_UPDATING, verb: 'Updating' });
 
-      // Hack around differing datasource behaviors
-      let atcPromise;
-      if (dataSource instanceof EpiserverDataSource) {
-        atcPromise = dataSource.addToCartWithVariant(product.id, quantity, product, variant);
-      } else {
-        const id = variant ? variant.id : product.id;
-        atcPromise = dataSource.addToCart(id, quantity, product);
+      const id = variant ? variant.id : product.id;
+
+      try {
+        await dataSource.addToCart(id, quantity, product);
+        Analytics.add.product('ProductDetail', mapProductToAnalytics(product, quantity));
+        const cartData = await dataSource.fetchCart();
+        dispatch({ type: UPDATE_CART, cartData });
+
+        return cartData;
+
+      } catch (e) {
+        dispatch({ type: RESET_CART_UPDATING });
+        console.warn(e);
+        return;
       }
 
-      return atcPromise
-        .then(async atcResponse => {
-          Analytics.add.product('ProductDetail', mapProductToAnalytics(product, quantity));
-
-          return dataSource.fetchCart();
-        })
-        .then(cartData => {
-          dispatch({ type: UPDATE_CART, cartData });
-          return cartData;
-        })
-        .catch(e => {
-          dispatch({ type: RESET_CART_UPDATING });
-          console.warn(e);
-        });
     },
     updateItemQuantity: (item, quantity) => {
       dispatch({ type: SET_CART_UPDATING, verb: 'Updating' });
