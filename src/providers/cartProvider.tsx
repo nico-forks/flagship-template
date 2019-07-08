@@ -8,6 +8,7 @@ import { CommerceTypes } from '@brandingbrand/fscommerce';
 import { CombinedStore } from '../reducers';
 import { connect } from 'react-redux';
 import Analytics, { mapProductToAnalytics } from '../lib/analytics';
+import EpiserverDataSource from '../lib/EpiserverDataSource';
 
 export interface CartStateProps {
   cart: {
@@ -45,8 +46,16 @@ function mapDispatchToProps(dispatch: any, ownProps: any): CartActionProps {
     addToCart: async (product, quantity, variant) => {
       dispatch({ type: SET_CART_UPDATING, verb: 'Updating' });
 
-      return dataSource
-        .addToCartWithVariant(product.id, quantity, product, variant)
+      // Hack around differing datasource behaviors
+      let atcPromise;
+      if (dataSource instanceof EpiserverDataSource) {
+        atcPromise = dataSource.addToCartWithVariant(product.id, quantity, product, variant);
+      } else {
+        const id = variant ? variant.id : product.id;
+        atcPromise = dataSource.addToCart(id, quantity, product);
+      }
+
+      return atcPromise
         .then(async atcResponse => {
           Analytics.add.product('ProductDetail', mapProductToAnalytics(product, quantity));
 
