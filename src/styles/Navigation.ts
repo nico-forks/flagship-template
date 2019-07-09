@@ -11,7 +11,7 @@ export const navBarDark = {
 };
 
 export const navBarLight = {
-  statusBarTextColorScheme: 'dark',
+  statusBarTextColorScheme: isIOS ? 'dark' : 'light',
   navBarBackgroundColor: palette.onPrimary,
   navBarButtonColor: palette.primary,
   navBarTextColor: palette.primary
