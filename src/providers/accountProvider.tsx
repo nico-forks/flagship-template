@@ -59,7 +59,7 @@ const reloadSessionData = async (): Promise<any> => {
 
 export const signOut = (dispatch: any) => async (clearSaved: boolean = true) => {
   return dataSource
-    .logout()
+    .logout('', '')
     .then(async () => {
       if (!clearSaved) {
         return;

@@ -93,65 +93,47 @@ export default class EpiserverDataSource implements CommerceDataSource {
     };
   }
 
-  async addToCartWithVariant(
+  async addToCart(
     id: string,
     qty: number = 1,
-    product: CommerceTypes.Product,
-    variant?: CommerceTypes.Variant
+    product?: CommerceTypes.Product
   ): Promise<CommerceTypes.Cart> {
-    const identifier = variant ? variant.id : id;
     const cart = await this.getStoredCartOrEmptyCart();
-
-    const items = cart.items;
-    let matchingItem: CommerceTypes.CartItem | undefined;
-
-    items.forEach(item => {
-      if (item.itemId === identifier) {
-        matchingItem = item;
-      }
-    });
-
-    const options: CommerceTypes.Option[] = [];
-
-    if (variant && variant.optionValues) {
-      variant.optionValues.forEach(optionValue => {
-        options.push({
-          id: optionValue.name,
-          name: optionValue.name,
-          values: [{
-            name: optionValue.value,
-            value: optionValue.value
-          }]
-        });
-      });
+    if (!product) {
+      return cart;
     }
+
+    const matchingItem = cart.items.find(item => item.itemId === id);
 
     if (matchingItem) {
       matchingItem.quantity = matchingItem.quantity + qty;
     } else {
+      const variant: CommerceTypes.Variant = (product.variants || [])
+        .find(variant => variant.id === id) || { id: '', optionValues: []};
+      const options = variant.optionValues.map(val => ({
+        id: val.name,
+        name: val.name,
+        values: [{
+          name: val.value,
+          value: val.value
+        }]
+      }));
+
       cart.items.push({
-        itemId: identifier,
-        productId: identifier,
+        itemId: id,
+        productId: id,
         quantity: qty,
-        handle: product.handle || identifier,
-        title: product.title,
-        images: (variant && variant.images) || product.images || undefined,
-        options,
-        price: product.price
+        handle: product.handle || id,
+        title: variant.title || product.title,
+        images: variant.images || product.images,
+        price: variant.price || product.price,
+        options: options.length > 0 ? options : product.options
       });
     }
 
     await AsyncStorage.setItem(STORAGE_KEYS.cart, JSON.stringify(cart));
 
     return cart;
-  }
-
-  async addToCart(
-    id: string,
-    qty: number = 1,
-    product?: CommerceTypes.Product
-  ): Promise<CommerceTypes.Cart> {
-    throw new Error('not implemented; use addToCartWithVariant instead');
   }
 
   async search(

@@ -557,7 +557,7 @@ class PSProductDetailComponent extends Component<
         {options.map((option, index) => {
           const defaultOption = find(optionValues, { name: option.id });
 
-          if (Array.isArray(option.values) && option.values.length === 1) {
+          if (Array.isArray(option.values) && option.values.length === 0) {
             return null;
           }
 
@@ -636,6 +636,10 @@ class PSProductDetailComponent extends Component<
       return { src: { uri: (image.uri || '').trim() } };
     });
 
+    // Hack around the zoom carousel being broken
+    // TODO: Fix.
+    const singleImageSource = [imagesSources[0]];
+
     // Align zoom close button to bottom center. Set left to half of the screen width minus
     // half of the close button image width in order to achieve this.
     const zoomCloseButtonStyle = {
@@ -654,7 +658,7 @@ class PSProductDetailComponent extends Component<
           <View style={{flex: 1}}>
             <View style={styles.bottomPadding}>
               <ZoomCarousel
-                images={imagesSources}
+                images={singleImageSource}
                 dotStyle={styles.zoomCarouselDotStyle}
                 dotActiveStyle={styles.zoomCarouselDotActiveStyle}
                 renderZoomButton={this._renderZoomButton}

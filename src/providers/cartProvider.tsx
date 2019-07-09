@@ -45,21 +45,22 @@ function mapDispatchToProps(dispatch: any, ownProps: any): CartActionProps {
     addToCart: async (product, quantity, variant) => {
       dispatch({ type: SET_CART_UPDATING, verb: 'Updating' });
 
-      return dataSource
-        .addToCartWithVariant(product.id, quantity, product, variant)
-        .then(async atcResponse => {
-          Analytics.add.product('ProductDetail', mapProductToAnalytics(product, quantity));
+      const id = variant ? variant.id : product.id;
 
-          return dataSource.fetchCart();
-        })
-        .then(cartData => {
-          dispatch({ type: UPDATE_CART, cartData });
-          return cartData;
-        })
-        .catch(e => {
-          dispatch({ type: RESET_CART_UPDATING });
-          console.warn(e);
-        });
+      try {
+        await dataSource.addToCart(id, quantity, product);
+        Analytics.add.product('ProductDetail', mapProductToAnalytics(product, quantity));
+        const cartData = await dataSource.fetchCart();
+        dispatch({ type: UPDATE_CART, cartData });
+
+        return cartData;
+
+      } catch (e) {
+        dispatch({ type: RESET_CART_UPDATING });
+        console.warn(e);
+        return;
+      }
+
     },
     updateItemQuantity: (item, quantity) => {
       dispatch({ type: SET_CART_UPDATING, verb: 'Updating' });

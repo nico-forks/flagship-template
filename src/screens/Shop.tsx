@@ -17,9 +17,9 @@ import {
 import { env as projectEnv } from '@brandingbrand/fsapp';
 
 import PSScreenWrapper from '../components/PSScreenWrapper';
-// import PSHeroCarousel, {
-//   PSHeroCarouselItem
-// } from '../components/PSHeroCarousel';
+import PSHeroCarousel, {
+  PSHeroCarouselItem
+} from '../components/PSHeroCarousel';
 import PSButton from '../components/PSButton';
 import PSShopLandingCategories from '../components/PSShopLandingCategories';
 
@@ -40,7 +40,6 @@ import PSProductCarousel from '../components/PSProductCarousel';
 // const searchIcon = require('../../assets/images/search.png');
 
 const moseyLogo = require('../../assets/images/mosey_logo.png');
-const landingImage = require('../../assets/images/Shop.png');
 
 const ShopStyle = StyleSheet.create({
   arrow: {
@@ -251,12 +250,12 @@ export class UnwrappedShop extends Component<ShopProps> {
             onSignInPress={openSignInModal(navigator)}
             onSignOutPress={this.handleSignOut}
           />*/}
-          {/*<PSHeroCarousel
+          <PSHeroCarousel
             style={ShopStyle.heroCarousel}
             cmsGroup='Shop'
             cmsSlot='Hero-Carousel'
             onItemPress={this.handleHeroCarouselPress}
-          />*/}
+          />
           {/*
           <View style={ShopStyle.searchBarContainer}>
             <SearchBar
@@ -273,7 +272,6 @@ export class UnwrappedShop extends Component<ShopProps> {
             </TouchableOpacity>
           </View>
           */}
-          <Image style={{width: '100%'}} resizeMode='cover' source={landingImage} />
 
           {/* this.renderShopButtons() */}
 
@@ -311,11 +309,11 @@ export class UnwrappedShop extends Component<ShopProps> {
     );
   }
 
-  // handleHeroCarouselPress = (item: PSHeroCarouselItem) => {
-  //   if (item.Link) {
-  //     handleDeeplink(item.Link, this.props.navigator);
-  //   }
-  // }
+  handleHeroCarouselPress = (item: PSHeroCarouselItem) => {
+    if (item.Link) {
+      handleDeeplink(item.Link, this.props.navigator);
+    }
+  }
 
   handleSignOut = () => {
     this.props.signOut().catch(e => console.warn(e));
