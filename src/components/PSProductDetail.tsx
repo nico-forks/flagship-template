@@ -379,6 +379,23 @@ class PSProductDetailComponent extends Component<
   //   }
   // }
 
+  componentDidUpdate(prevProps: PSProductDetailComponentInternalProps): void {
+    if (!this.props.commerceData) {
+      if (prevProps.commerceData) {
+        this.props.navigator.setTitle({ title: '' });
+      }
+
+      return;
+    }
+
+    const oldTitle = prevProps.commerceData && prevProps.commerceData.title;
+    const title = this.props.commerceData && this.props.commerceData.title;
+
+    if (title !== oldTitle) {
+      this.props.navigator.setTitle({ title });
+    }
+  }
+
   updateOption = (name: string) => (value: string) => {
     if (this.props.commerceData) {
       const { variants } = this.props.commerceData;
