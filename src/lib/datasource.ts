@@ -1,6 +1,7 @@
 import { env } from '@brandingbrand/fsapp';
 import EpiserverDataSource from './EpiserverDataSource';
 import { CommerceCloudDataSource } from '@brandingbrand/fssalesforce';
+import { ShopifyDataSource } from '@brandingbrand/fsshopify';
 import { CommerceDataSource } from '@brandingbrand/fscommerce';
 import FSNetwork from '@brandingbrand/fsnetwork';
 import { commerceCloudMiddleware } from './commerceCloudMiddleware';
@@ -16,7 +17,12 @@ export interface DataSourceConfig {
 
 if (env.dataSource.type === 'episerver') {
   dataSourceToExport = new EpiserverDataSource(env.dataSource.apiConfig.apiHost);
-} else {
+
+} else if (env.dataSource.type === 'shopify') {
+  const config: any = env.dataSource.apiConfig;
+  dataSourceToExport = new ShopifyDataSource(config);
+
+} else if (env.dataSource.type === 'commercecloud') {
   dataSourceToExport = new CommerceCloudDataSource({
     ...env.dataSource.apiConfig,
     middleware: commerceCloudMiddleware,
@@ -24,6 +30,8 @@ if (env.dataSource.type === 'episerver') {
       new FSNetwork(env.dataSource.apiConfig.networkClient) :
       env.dataSource.apiConfig.networkClient
   });
+} else {
+  throw new Error('Data Source is not configured.');
 }
 
 export const dataSource = dataSourceToExport;

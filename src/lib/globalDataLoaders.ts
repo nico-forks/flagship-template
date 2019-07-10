@@ -1,5 +1,4 @@
 import { dataSource } from './datasource';
-import { CommerceTypes } from '@brandingbrand/fscommerce';
 import { env as appEnv } from '@brandingbrand/fsapp';
 
 import {
@@ -32,10 +31,9 @@ export async function loadTopCategories(): Promise<void> {
   return dataSource
     .fetchCategory()
     .then(data => {
-      console.log(formatCategories(data));
       app.store.dispatch({
         type: UPDATE_TOP_CATEGORIES,
-        data: formatCategories(data).slice(0, 10)
+        data: (data.categories || []).slice(0, 10)
       });
     })
     .catch(err => {
@@ -63,17 +61,4 @@ export async function loadPromoProducts(): Promise<void> {
         console.error('error fetching promo products', err);
       });
   }
-}
-
-function formatCategories(rootCategory: CommerceTypes.Category): any {
-  return (rootCategory.categories || []).map(subCategory => ({
-    id: subCategory.id,
-    handle: subCategory.id,
-    title: subCategory.title,
-    items: (subCategory.categories || []).map(subSubCategory => ({
-      id: subSubCategory.id,
-      title: subSubCategory.title,
-      image: subSubCategory.image
-    }))
-  }));
 }
