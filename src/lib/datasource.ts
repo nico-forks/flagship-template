@@ -36,3 +36,25 @@ if (env.dataSource.type === 'episerver') {
 
 export const dataSource = dataSourceToExport;
 export const dataSourceConfig: DataSourceConfig = env.dataSource;
+
+
+export function chooseDataSource(type: string, apiConfig: any): any {
+  let dsToExport: CommerceDataSource;
+  if (type === 'episerver') {
+    dsToExport = new EpiserverDataSource(apiConfig.apiHost);
+  } else if (type === 'commercecloud') {
+    dsToExport = new CommerceCloudDataSource({
+      ...apiConfig,
+      middleware: commerceCloudMiddleware,
+      networkClient: apiConfig.networkClient ?
+        new FSNetwork(apiConfig.networkClient) :
+        apiConfig.networkClient
+    });
+  } else if (type === 'shopify') {
+    const config: any = apiConfig;
+    dsToExport = new ShopifyDataSource(config);
+  } else {
+    throw new Error('No data source specified!');
+  }
+  return dsToExport;
+}

@@ -4,6 +4,7 @@ import topCategoryReducer, { TopCategoryStore } from './reducers/topCategoryRedu
 import recentlyViewedReducer, { RecentlyViewedStore } from './reducers/recentlyViewedReducer';
 import promoProductsReducer, { PromoProductsStore } from './reducers/promoProductsReducer';
 import inboxReducer, { InboxStore } from './reducers/inboxReducer';
+import pagesReducer, { PagesStore } from './reducers/pagesReducer';
 
 export interface CombinedStore {
   account: AccountStore;
@@ -12,6 +13,7 @@ export interface CombinedStore {
   topCategory: TopCategoryStore;
   recentlyViewed: RecentlyViewedStore;
   inbox: InboxStore;
+  pageBuilder: PagesStore;
 }
 
 export default {
@@ -20,5 +22,6 @@ export default {
   promoProducts: promoProductsReducer,
   topCategory: topCategoryReducer,
   recentlyViewed: recentlyViewedReducer,
-  inbox: inboxReducer
+  inbox: inboxReducer,
+  pageBuilder: pagesReducer
 };
