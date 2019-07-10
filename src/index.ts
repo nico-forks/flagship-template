@@ -42,6 +42,12 @@ const appConfig: FSAppTypes.AppConfigType = {
       label: 'Contact',
       title: 'Contact',
       icon: require('../assets/images/contact-tab.png')
+    },
+    {
+      screen: 'AppBuilder',
+      label: 'App Builder',
+      title: 'App Builder',
+      icon: require('../assets/images/contact-tab.png')
     }
   ],
   tabsStyle: tabBarDefault,

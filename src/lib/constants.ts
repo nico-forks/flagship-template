@@ -15,6 +15,9 @@ export const UPDATE_RECENTLY_VIEWED = 'UPDATE_RECENTLY_VIEWED';
 export const INBOX_LOADED = 'INBOX_LOADED';
 export const INBOX_LOADING = 'INBOX_LOADING';
 export const INBOX_LOADING_ERROR = 'INBOX_LOADING_ERROR';
+export const PAGES_LOADED = 'PAGES_LOADED';
+export const PAGES_LOADING = 'PAGES_LOADING';
+export const PAGES_LOADING_ERROR = 'PAGES_LOADING_ERROR';
 export const EMAIL_REGEX = /[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*/;
 export const STORAGE_KEYS = {
   username: 'signin_email',

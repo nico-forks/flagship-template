@@ -31,6 +31,7 @@ import ImageWithOverlaySample from './screens/ImageWithOverlaySample';
 import CartCountSample from './screens/CartCountSample';
 import Contact from './screens/Contact';
 import Home from './screens/Home';
+import AppBuilder from './screens/AppBuilder';
 import { EngagementComp } from './lib/engagement';
 
 export default {
@@ -64,5 +65,6 @@ export default {
   CartCountSample,
   Contact,
   Home,
-  EngagementComp
+  EngagementComp,
+  AppBuilder
 };
