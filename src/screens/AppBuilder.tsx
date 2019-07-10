@@ -126,7 +126,6 @@ export class AppBuilder extends Component<AppBuilderProps> {
     });
   }
   componentWillMount(): void {
-    console.log('componentWillMount')
     this.props.fetchPages();
   }
 

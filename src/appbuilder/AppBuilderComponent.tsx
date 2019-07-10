@@ -69,12 +69,12 @@ export default function(
         componentProps,
         private_type,
         ...restProps } = item;
-console.log(item)
+
       const props = {
         ...restProps,
         ...componentProps
       };
-      console.log(layoutComponents)
+
       if (!layoutComponents[private_type]) {
         return null;
       }
@@ -98,8 +98,6 @@ console.log(item)
     }
 
     renderScrollView(): JSX.Element {
-      console.log('THIS IS THE LAYOUT::::')
-      console.log(this.props.json)
       if (this.props.noScrollView) {
         return (
           <Fragment>
@@ -128,8 +126,6 @@ console.log(item)
     }
 
     render(): JSX.Element {
-      console.log('renderrrrr')
-      console.log(this.props.json);
       return (
         <View style={styles.container}>
           {this.renderScrollView()}
