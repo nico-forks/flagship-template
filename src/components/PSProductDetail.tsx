@@ -538,10 +538,10 @@ class PSProductDetailComponent extends Component<
 
   renderShareButton = (): React.ReactNode => {
     const commerceData = this.props.commerceData as CommerceTypes.Product & { [key: string]: any };
-    const { id, title } = commerceData;
+    const { title } = commerceData;
     const content = {
       title: `I've shared a product from Mosey with you`,
-      message: `Check out ${title} at https://brandingbrand.azurewebsites.net/en/${id}`
+      message: `Check out ${title}!`
     };
     const renderShareIcon = () => {
       return (
