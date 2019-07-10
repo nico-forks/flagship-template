@@ -1,5 +1,5 @@
 {
-  "name": "episerver-demo-app.rn",
+  "name": "flagship-template-demo",
   "private": true,
   "version": "0.0.1",
   "scripts": {
@@ -70,7 +70,7 @@
     "typescript": "~3.0.1"
   },
   "main": "index.js",
-  "repository": "git@github.com:andyschwob/episerver-demo-app.fs.git",
-  "author": "andy.schwob@brandingbrand.com",
+  "repository": "git@github.com:brandingbrand/flagship-template-demo.git",
+  "author": "",
   "license": "MIT"
 }
