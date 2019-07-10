@@ -9,11 +9,9 @@ import {
   Platform,
   StyleSheet,
   Text,
-  // TouchableOpacity,
   View
 } from 'react-native';
 
-// import { SearchBar } from '@brandingbrand/fscomponents';
 import { env as projectEnv } from '@brandingbrand/fsapp';
 
 import PSScreenWrapper from '../components/PSScreenWrapper';
@@ -35,10 +33,6 @@ import { connect } from 'react-redux';
 import { AccountActionProps, signOut } from '../providers/accountProvider';
 import PSProductCarousel from '../components/PSProductCarousel';
 import { CommerceTypes } from '@brandingbrand/fscommerce';
-
-// const arrow = require('../../assets/images/arrow.png');
-// const logo = require('../../assets/images/m-120.png');
-// const searchIcon = require('../../assets/images/search.png');
 
 const moseyLogo = require('../../assets/images/mosey_logo.png');
 
@@ -238,49 +232,17 @@ export class UnwrappedShop extends Component<ShopProps> {
             source={moseyLogo}
             resizeMode={'center'}
           />
-          {/*<PSWelcome
-            logo={logo}
-            userName={
-              account &&
-              account.store &&
-              account.store.firstName
-            }
-            isLoggedIn={account && account.isLoggedIn}
-            style={ShopStyle.welcome}
-            onSignInPress={openSignInModal(navigator)}
-            onSignOutPress={this.handleSignOut}
-          />*/}
           <PSHeroCarousel
             style={ShopStyle.heroCarousel}
             cmsGroup='Shop'
             cmsSlot='Hero-Carousel'
             onItemPress={this.handleHeroCarouselPress}
           />
-          {/*
-          <View style={ShopStyle.searchBarContainer}>
-            <SearchBar
-              containerStyle={GlobalStyle.searchBarInner}
-              inputTextStyle={GlobalStyle.searchBarInputTextStyle}
-              searchIcon={searchIcon}
-              placeholder={translate.string(translationKeys.search.placeholder)}
-            />
-            <TouchableOpacity
-              style={StyleSheet.absoluteFill}
-              onPress={this.showSearchScreen}
-            >
-              <View />
-            </TouchableOpacity>
-          </View>
-          */}
-
-          {/* this.renderShopButtons() */}
-
           <View style={ShopStyle.topCategoriesContainer}>
             <Text style={[GlobalStyle.h2, ShopStyle.sectionTitle]}>
               {'Shop Now'}
             </Text>
           </View>
-
           <PSShopLandingCategories
             categories={topCategory && topCategory.categories}
             style={ShopStyle.shopLandingCategories}

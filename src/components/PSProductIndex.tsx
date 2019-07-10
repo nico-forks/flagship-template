@@ -13,12 +13,9 @@ import { CommerceTypes } from '@brandingbrand/fscommerce';
 import { ProductIndex, ProductIndexSearch } from '@brandingbrand/fsproductindex';
 
 import { dataSource } from '../lib/datasource';
-import { backButton/*, searchButton*/ } from '../lib/navStyles';
+import { backButton } from '../lib/navStyles';
 import { navBarDefault } from '../styles/Navigation';
 import { NavButton, NavigatorStyle } from '../lib/commonTypes';
-
-// import PSFilterActionBar from '../components/PSFilterActionBar';
-
 import { FilterItem, ProductItem } from '@brandingbrand/fscomponents';
 import { border, color, fontSize, palette } from '../styles/variables';
 import translate, { translationKeys } from '../lib/translations';
@@ -263,19 +260,8 @@ class PSProductIndex extends Component<ProductIndexProps, ProductIndexState> {
     };
   }
 
-  renderRefineActionBar = (showFilterModal: any, showSortModal: any, commerceData: any) => {
+  renderRefineActionBar = () => {
     return null;
-
-    // return (
-    //   <PSFilterActionBar
-    //     showFilterModal={showFilterModal}
-    //     showSortModal={showSortModal}
-    //     commerceData={commerceData}
-    //     keyword={this.props.keyword}
-    //     handleColumnToggle={this.toggleColumnLayout}
-    //     isMultiColumn={this.state.isMultiColumn}
-    //   />
-    // );
   }
 
   render(): JSX.Element | null {
