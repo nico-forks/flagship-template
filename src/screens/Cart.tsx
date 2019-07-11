@@ -242,7 +242,7 @@ class Cart extends Component<CartScreenProps> {
       );
     } else if (cartData && cartData.items) {
       this.props.navigator.setTabBadge({
-        tabIndex: 2,
+        tabIndex: 1,
         badge: this.props.cart.cartCount || null,
         badgeColor: palette.primary
       });
@@ -303,7 +303,7 @@ class Cart extends Component<CartScreenProps> {
     });
 
     this.props.navigator.setTabBadge({
-      tabIndex: 2,
+      tabIndex: 1,
       badge:
         (cartData.items &&
           cartData.items.reduce((total, item) => total + item.quantity, 0)) ||
@@ -400,7 +400,7 @@ class Cart extends Component<CartScreenProps> {
   continueShopping = () => {
     if (Platform.OS !== 'web') {
       this.props.navigator.switchToTab({
-        tabIndex: 1
+        tabIndex: 0
       });
     } else {
       this.props.navigator.push({
@@ -521,8 +521,8 @@ class Cart extends Component<CartScreenProps> {
   }
 
   startCheckout = (): void => {
-    this.props.navigator.switchToTab({
-      tabIndex: 3
+    this.props.navigator.push({
+      screen: 'Contact'
     });
   }
 }

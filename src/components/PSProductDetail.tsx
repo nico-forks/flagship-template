@@ -616,8 +616,8 @@ class PSProductDetailComponent extends Component<
   }
 
   goToContact = () => {
-    this.props.navigator.switchToTab({
-      tabIndex: 3
+    this.props.navigator.push({
+      screen: 'Contact'
     });
   }
 

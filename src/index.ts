@@ -20,16 +20,10 @@ const appConfig: FSAppTypes.AppConfigType = {
   env: projectEnv,
   tabs: [
     {
-      screen: 'Home',
-      label: 'Home',
-      title: 'Home',
-      icon: require('../assets/images/home-tab-icon.png')
-    },
-    {
       screen: 'Shop',
       label: 'Shop',
       title: 'Shop',
-      icon: require('../assets/images/shop-tab-icon.png')
+      icon: require('../assets/images/home-tab-icon.png')
     },
     {
       screen: 'Cart',
@@ -38,10 +32,10 @@ const appConfig: FSAppTypes.AppConfigType = {
       icon: require('../assets/images/cart-tab-icon.png')
     },
     {
-      screen: 'Contact',
-      label: 'Contact',
-      title: 'Contact',
-      icon: require('../assets/images/contact-tab.png')
+      screen: 'Home',
+      label: 'Inbox',
+      title: 'Inbox',
+      icon: require('../assets/images/inbox.png')
     },
     {
       screen: 'AppBuilder',
