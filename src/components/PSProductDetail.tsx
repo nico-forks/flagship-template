@@ -32,14 +32,12 @@ import {
   WithProductDetailProviderProps
 } from '@brandingbrand/fsproductdetail';
 import withCart, { CartProps } from '../providers/cartProvider';
-// import { RecentlyViewedProps } from '../providers/recentlyViewedProvider';
 
 import PSButton from './PSButton';
 import PSProductCarousel from './PSProductCarousel';
 import PSStepper from './PSStepper';
 import PSHTMLView from './PSHTMLView';
 import PSModal from './PSModal';
-// import Analytics, { mapProductToAnalytics } from '../lib/analytics';
 import translate, { translationKeys } from '../lib/translations';
 
 import * as variables from '../styles/variables';
@@ -48,7 +46,6 @@ import {
   CommerceTypes
 } from '@brandingbrand/fscommerce';
 import PSScreenWrapper from './PSScreenWrapper';
-// import PSRecentlyViewedCarousel from './PSRecentlyViewedCarousel';
 
 type Navigator = import ('react-native-navigation').Navigator;
 
@@ -356,29 +353,6 @@ class PSProductDetailComponent extends Component<
     this.needsImpression = true;
   }
 
-  // trackImpression = (): void => {
-  //   if (this.needsImpression) {
-  //     const { commerceData } = this.props;
-
-  //     if (commerceData) {
-  //       Analytics.detail.product(
-  //         'ProductDetail',
-  //         mapProductToAnalytics(commerceData)
-  //       );
-
-  //       Analytics.screenview('ProductDetail', {
-  //         url: ''
-  //       });
-
-  //       if (this.props.addToRecentlyViewed) {
-  //         this.props.addToRecentlyViewed(commerceData);
-  //       }
-
-  //       this.needsImpression = false;
-  //     }
-  //   }
-  // }
-
   componentDidUpdate(prevProps: PSProductDetailComponentInternalProps): void {
     if (!this.props.commerceData) {
       if (prevProps.commerceData) {
@@ -538,10 +512,10 @@ class PSProductDetailComponent extends Component<
 
   renderShareButton = (): React.ReactNode => {
     const commerceData = this.props.commerceData as CommerceTypes.Product & { [key: string]: any };
-    const { id, title } = commerceData;
+    const { title } = commerceData;
     const content = {
       title: `I've shared a product from Mosey with you`,
-      message: `Check out ${title} at https://brandingbrand.azurewebsites.net/en/${id}`
+      message: `Check out ${title}!`
     };
     const renderShareIcon = () => {
       return (
@@ -631,8 +605,6 @@ class PSProductDetailComponent extends Component<
       return <Loading style={{ marginTop: 80 }} />;
     }
 
-    // this.trackImpression();
-
     const {
       brand,
       carousels = [],
@@ -653,8 +625,7 @@ class PSProductDetailComponent extends Component<
       return { src: { uri: (image.uri || '').trim() } };
     });
 
-    // Hack around the zoom carousel being broken
-    // TODO: Fix.
+    // Limit zoom carousel to a single image
     const singleImageSource = [imagesSources[0]];
 
     // Align zoom close button to bottom center. Set left to half of the screen width minus
@@ -737,18 +708,7 @@ class PSProductDetailComponent extends Component<
             </View>
             <View style={styles.edgePadding}>
               {options && this.renderSwatches(options)}
-              <View style={styles.quantityView}>
-                {/*
-                <View style={{ paddingBottom: 20 }}>
-                  <Text
-                    style={styles.quantityText}
-                  >
-                    {translate.string(translationKeys.item.qty)}:
-                  </Text>
-                  {this._renderStepper()}
-                </View>
-                */}
-              </View>
+              <View style={styles.quantityView} />
             </View>
             <View style={styles.bottomPadding}>
               <Accordion
@@ -863,22 +823,6 @@ class PSProductDetailComponent extends Component<
       }
     });
   }
-
-  // renderRecentlyViewed = () => {
-  //   const recentItems = (this.props.recentlyViewed.items || []).filter(
-  //     item => item.id !== this.props.id
-  //   );
-  //   if (!recentItems.length) {
-  //     return;
-  //   }
-
-  //   return (
-  //     <PSRecentlyViewedCarousel
-  //       items={recentItems}
-  //       navigator={this.props.navigator}
-  //     />
-  //   );
-  // }
 
   _renderCarousels = (carousel: any, index: number) => {
     return (

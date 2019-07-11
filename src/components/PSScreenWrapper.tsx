@@ -60,38 +60,6 @@ export default class PSScreenWrapper extends PureComponent<
     }
   };
 
-  constructor(props: PSScreenWrapperProps) {
-    super(props);
-
-    if (props.needInSafeArea) {
-      // TODO: Update these with proper types from react-native-safe-area
-      /*SafeArea.getSafeAreaInsetsForRootView()
-        .then((result: any) => {
-          const { safeAreaInsets } = result;
-          this.setState({ safeAreaInsets });
-        })
-        .catch((e: any) => console.warn('Unable to get Safe Area Insets', e));*/
-    }
-  }
-
-  componentDidMount(): void {
-    if (this.props.needInSafeArea) {
-      /*SafeArea.addEventListener(
-        'safeAreaInsetsForRootViewDidChange',
-        this.onSafeAreaInsetsForRootViewChange
-      );*/
-    }
-  }
-
-  componentWillUnmount(): void {
-    if (this.props.needInSafeArea) {
-      /*SafeArea.removeEventListener(
-        'safeAreaInsetsForRootViewDidChange',
-        this.onSafeAreaInsetsForRootViewChange
-      );*/
-    }
-  }
-
   onSafeAreaInsetsForRootViewChange = (result: {
     safeAreaInsets: any;
   }) => {

@@ -9,14 +9,6 @@ import { PSProductDetail } from '../components/PSProductDetail';
 import { CombinedStore } from '../reducers';
 import { connect } from 'react-redux';
 
-// import withAccount, { AccountProps } from '../providers/accountProvider';
-// import withRecentlyViewed, {
-//   RecentlyViewedProps
-// } from '../providers/recentlyViewedProvider';
-
-// Seeing an Android issue in which if the user clicks on one of the PDP tabs and then goes
-// back, the back buttons are invisible. Until we can investigate deeper we'll just make
-// the PDP have a dark header. -BW
 const NAVIGATOR_STYLE = Platform.OS === 'android' ? navBarDefault : navBarProductDetail;
 
 export interface ProductDetailProps extends ScreenProps, Pick<CombinedStore, 'promoProducts'> {
@@ -50,9 +42,6 @@ export class UnwrappedProductDetail extends Component<ProductDetailProps> {
           navigator={navigator}
           onOpenHTMLView={this.onOpenHTMLView}
           promoProducts={this.props.promoProducts}
-          // addToRecentlyViewed={this.props.addToRecentlyViewed}
-          // recentlyViewed={this.props.recentlyViewed}
-          // loadRecentlyViewed={this.props.loadRecentlyViewed}
         />
       </View>
     );
