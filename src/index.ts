@@ -59,6 +59,6 @@ requestAnimationFrame(loadCartData);
 requestAnimationFrame(loadAccountData);
 requestAnimationFrame(loadTopCategories);
 requestAnimationFrame(loadPromoProducts);
-
+console.disableYellowBox = true;
 const screenVisibilityListener = new ScreenVisibilityListener();
 screenVisibilityListener.register();

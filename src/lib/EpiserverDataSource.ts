@@ -54,9 +54,11 @@ export default class EpiserverDataSource implements CommerceDataSource {
     query?: CommerceTypes.CategoryQuery
   ): Promise<CommerceTypes.Category> {
     let response;
-
     if (id) {
-      response = await this.client.get(`/categories/${id}`);
+      const url = id === 'episerver-top'
+        ? `/catalogs/Fashion`
+        : `/categories/${id}`;
+      response = await this.client.get(url);
     } else {
       response = await this.client.get(`/catalogs/${env.dataSource.catalogName}`);
     }

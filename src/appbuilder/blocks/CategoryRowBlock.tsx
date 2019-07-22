@@ -38,6 +38,7 @@ export interface CategoryRowProps {
   rowStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   showArrow?: boolean;
+  categoryId?: string;
   onItemPress: (item: CommerceTypes.Category) => void;
   categories?: CommerceTypes.Category[];
 }
@@ -81,10 +82,13 @@ export default class CategoryRowBlock extends Component<CategoryRowProps, Catego
     const { categories, dataSource } = this.props;
     const dsType = dataSource && dataSource.type;
     const apiConfig = dataSource && dataSource.apiConfig;
-
+    let categoryId = this.props.categoryId || '';
+    if (dsType === 'episerver' && !categoryId) {
+      categoryId = 'episerver-top';
+    }
     if (dataSource) {
       chooseDataSource(dsType, apiConfig)
-        .fetchCategory()
+        .fetchCategory(categoryId)
         .then((data: any) => {
           this.setState({ categories: formatCategories(data).slice(0, 10) });
         })
