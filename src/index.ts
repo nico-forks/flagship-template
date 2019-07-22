@@ -59,6 +59,5 @@ requestAnimationFrame(loadCartData);
 requestAnimationFrame(loadAccountData);
 requestAnimationFrame(loadTopCategories);
 requestAnimationFrame(loadPromoProducts);
-
 const screenVisibilityListener = new ScreenVisibilityListener();
 screenVisibilityListener.register();

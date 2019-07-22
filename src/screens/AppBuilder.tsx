@@ -166,7 +166,28 @@ const mapStateToProps = (combinedStore: CombinedStore, ownProps: any) => {
   const appbuilderSlot = [...rawPages].find((page: any) => {
     return page.slotId === 'appbuilder';
   });
-
+  // if (appbuilderSlot && appbuilderSlot.content) {
+  //   appbuilderSlot.content = [{
+  //     private_type: 'SearchBar',
+  //     componentProps: {
+  //       containerStyle: {
+  //         marginBottom: 10,
+  //         paddingHorizontal: 15,
+  //         paddingVertical: 10
+  //       },
+  //       searchBarInner: {
+  //         borderWidth: 0,
+  //         borderRadius: 5,
+  //         backgroundColor: '#f5f5f5'
+  //       },
+  //       searchBarInputTextStyle: {
+  //         height: 40
+  //       },
+  //       placeholder: 'Search for something',
+  //       showSearchIcon: false
+  //     }
+  //   }];
+  // }
   return {
     blocks: (appbuilderSlot && appbuilderSlot.content) || [],
     account: combinedStore.account,
