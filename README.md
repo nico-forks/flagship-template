@@ -8,10 +8,16 @@
 
 # Flagship Template
 
-* [Setting up your Development Environment](#setting-up-your-development-environment)
-* [Running an App for the First Time](#running-an-app-for-the-first-time)
-* [Using the Environment Switcher](#using-the-environment-switcher)
-* [Customizing Your App](#customizing-your-app)
+  * [Setting up your Development Environment](#setting-up-your-development-environment)
+  * [Running an App for the First Time](#running-an-app-for-the-first-time)
+  * [Using the Environment Switcher](#using-the-environment-switcher)
+  * [Customizing Your App](#customizing-your-app)
+    + [Editing the Environment Properties](#editing-the-environment-properties)
+    + [Add Custom App Icons](#add-custom-app-icons)
+    + [Add Custom Launch Screens](#add-custom-launch-screens)
+    + [Customize the Tabs](#customize-the-tabs)
+    + [Customize the App's Color Scheme](#customize-the-apps-color-scheme)
+    + [Add New Screens](#add-new-screens)
 
 This is a [Template Repository](https://help.github.com/en/articles/creating-a-template-repository) for creating a working app using [Flagship](https://github.com/brandingbrand/flagship), Branding Brand's open-source React Native framework for e-commerce apps.
 
@@ -80,6 +86,6 @@ The `src/styles/variables.ts` file contains color constants that are applied thr
 
 The `src/styles/Navigation.ts` file contains all of the styles for [React Native Navigation](https://x-guard.github.io/react-native-navigation/#/styling-the-navigator). These control the styles of the tab bar, status bar, and navigation bar.
 
- ## Add New Screens
+ ### Add New Screens
  
 Screens are simply React components that have some default properties passed in through React Native Navigation and Flagship. The screens for the app are located in `src/screens/`. Each screen needs to be registered in `src/screens.tsx` before it can be used by React Native Navigation.
