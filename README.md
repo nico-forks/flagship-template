@@ -11,8 +11,11 @@
 * [Setting up your Development Environment](#setting-up-your-development-environment)
 * [Running an App for the First Time](#running-an-app-for-the-first-time)
 * [Using the Environment Switcher](#using-the-environment-switcher)
+* [Customizing Your App](#customizing-your-app)
 
 This is a [Template Repository](https://help.github.com/en/articles/creating-a-template-repository) for creating a working app using [Flagship](https://github.com/brandingbrand/flagship), Branding Brand's open-source React Native framework for e-commerce apps.
+
+Simply click the "Use Template" button on the homepage to copy a fully functioning Flagship demo app to your own repository.
 
 The app comes pre-installed with demo commerce integrations for Episerver Commerce, Salesforce Commerce Cloud, and Shopify. It also features implementations of Branding Brand's Inbox and App Builder products.
 
@@ -20,17 +23,7 @@ Flagship can be used to build apps that support Android, iOS, and web with a sin
 
 ## Setting up your Development Environment
 
-You'll need a Mac with Xcode to build iOS applications. Windows and Linux machines can be used for Android development, though in our experience Windows users may experience issues setting up Node and other dependencies.
-
-We recommend following React Native's [Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) guide for installing all necessary applications and frameworks.
-
- 1. Click the "React Native CLI Quickstart" tab
- 1. Select the tab corresponding to your development machine's OS: macOS, Windows, or Linux
- 1. Select the tab corresponding to the mobile OS you which to set up: iOS or Android
- 1. Follow the steps in the "Installing Dependencies" section
- 1. Repeat for all mobile OSes you wish to use
-
-In addition to the dependencies listed by React Native, you'll also need Yarn for package management. Please refer to the [instructions on their website](https://yarnpkg.com/en/docs/install) to install Yarn.
+Please see the [Flagship documentation](https://github.com/brandingbrand/flagship/wiki/Setting-up-Your-Development-Environment) for instructions on how to install the dependencies and tools you'll need to develop Flagship applications.
 
 ## Running an App for the First Time
 
@@ -49,22 +42,44 @@ To test Android, you'll either need to spin up an Android emulator through Andro
 
 ## Using the Environment Switcher
 
-If you run `init` without specifying an environment, the `prod` environment will be selected which is configured to use the Episerver data source. You can switch between environment (and thus data sources) without leaving the app when running in development mode.
+You can use the Flagship environment switcher to view the app running against Episerver, Demandware, and Shopify. For information on how to select an environment, please refer to the appropriate [Flagship documentation](https://github.com/brandingbrand/flagship/wiki/Managing-Environments#selecting-the-environment).
 
-First, tap on the environment label button on the bottom right of the screen:
+## Customizing Your App
 
-![image](https://user-images.githubusercontent.com/2915629/60994880-68dae380-a31f-11e9-9886-00af5ac871fd.png)
+### Editing the Environment Properties
 
-Next, tap on the Env Switcher menu item:
+Open `env/common.js` in your editor. There are a few values you'll need to change to make the app your own:
 
-![image](https://user-images.githubusercontent.com/2915629/60994980-8f991a00-a31f-11e9-8306-651e20a382a9.png)
+* **name**: This is the internal code-friendly name of your app which will be used for such tasks as naming the internal Xcode and Android project files.
+* **displayName:** This is the user-facing name of the app which will be displayed on the user's home screen.
+* **bundleIds:** These should match the identifiers registered with the App and Google Play stores (e.g., com.bestbargains.ios).
+* **cmsPropertyId:** This is the app's identifier if using the Branding Brand CMS.
 
-Next, tap on an environment to see its settings:
+### Add Custom App Icons
 
-![image](https://user-images.githubusercontent.com/2915629/60995077-ca9b4d80-a31f-11e9-90bc-7516818a548a.png)
+These are the icons users see on their home screens to launch the app. See the [Flagship documentation](https://github.com/brandingbrand/flagship/wiki/Creating-App-Icons) to see how to add custom icons for your app.
 
-Finally, tap on the "Switch to..." button to use the selected environment:
+### Add Custom Launch Screens
 
-![image](https://user-images.githubusercontent.com/2915629/60995131-e4d52b80-a31f-11e9-8e41-69bce92a15a7.png)
+These are the splash screens that users see while the app is loading. See the [Flagship Documentation](https://github.com/brandingbrand/flagship/wiki/Creating-Launch-Screens) to see how to customize the launch screens.
 
-Note that the development menu contains other useful functions such as the ability to reload the app's JS Bundle and reset local storage.
+### Customize the Tabs
+
+Your app can have up to five tabs at the bottom that serve as starting points for different sections of your application. Each tab has its own navigation stack.
+
+Tabs are configured in the settings passed into FSApp. You can view this configuration in `src/index.ts`. You'll see a `tabs` array containing a number of objects, each having these properties:
+
+* screen: The screen to be displayed by the app. This should be a screen that is registered to React Native Navigation.
+* label: The value of the text label displayed under the tab icon.
+* title: The name displayed on the screen corresponding to the tab, if said screen has the navigation bar enabled.
+* icon: This should `require()` an image that has 1x, 2x, and 3x variants.
+
+### Customize the App's Color Scheme
+
+The `src/styles/variables.ts` file contains color constants that are applied throughout the application. By updating the `primary`, `secondary`, and `accent` colors you'll cover a lot of ground getting the app to your preferred color scheme.
+
+The `src/styles/Navigation.ts` file contains all of the styles for [React Native Navigation](https://x-guard.github.io/react-native-navigation/#/styling-the-navigator). These control the styles of the tab bar, status bar, and navigation bar.
+
+ ## Add New Screens
+ 
+Screens are simply React components that have some default properties passed in through React Native Navigation and Flagship. The screens for the app are located in `src/screens/`. Each screen needs to be registered in `src/screens.tsx` before it can be used by React Native Navigation.
