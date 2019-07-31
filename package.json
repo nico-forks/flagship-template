@@ -25,7 +25,7 @@
     "@brandingbrand/fscommerce": "~4.1.0",
     "@brandingbrand/fscomponents": "~4.1.0",
     "@brandingbrand/fsengage": "~4.1.0",
-    "@brandingbrand/fsengagement": "^~4.1.0",
+    "@brandingbrand/fsengagement": "~4.1.0",
     "@brandingbrand/fsfoundation": "~4.1.0",
     "@brandingbrand/fsi18n": "~4.1.0",
     "@brandingbrand/fsmockdatasources": "~4.1.0",
