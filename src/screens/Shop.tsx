@@ -1,5 +1,3 @@
-/* tslint:disable:jsx-use-translation-function */
-
 import React, { Component } from 'react';
 
 import {
@@ -34,7 +32,7 @@ import { AccountActionProps, signOut } from '../providers/accountProvider';
 import PSProductCarousel from '../components/PSProductCarousel';
 import { CommerceTypes } from '@brandingbrand/fscommerce';
 
-const moseyLogo = require('../../assets/images/mosey_logo.png');
+const fsLogo = require('../../assets/images/flagship_logo.png');
 
 const ShopStyle = StyleSheet.create({
   arrow: {
@@ -219,6 +217,7 @@ export class UnwrappedShop extends Component<ShopProps> {
 
   render(): JSX.Element {
     const { navigator, topCategory } = this.props;
+
     return (
       <PSScreenWrapper
         needInSafeArea={true}
@@ -227,11 +226,13 @@ export class UnwrappedShop extends Component<ShopProps> {
         navigator={navigator}
       >
         <View style={ShopStyle.container}>
-          <Image
-            style={{width: '100%', marginBottom: 15, marginTop: 5}}
-            source={moseyLogo}
-            resizeMode={'center'}
-          />
+          <View style={{ marginHorizontal: 50 }}>
+            <Image
+              style={{width: '100%', height: 43, marginBottom: 15, marginTop: 5}}
+              source={fsLogo}
+              resizeMode={'contain'}
+            />
+          </View>
           <PSHeroCarousel
             style={ShopStyle.heroCarousel}
             cmsGroup='Shop'
@@ -240,7 +241,7 @@ export class UnwrappedShop extends Component<ShopProps> {
           />
           <View style={ShopStyle.topCategoriesContainer}>
             <Text style={[GlobalStyle.h2, ShopStyle.sectionTitle]}>
-              {'Shop Now'}
+              {translate.string(translationKeys.screens.shop.sectionTitle)}
             </Text>
           </View>
           <PSShopLandingCategories

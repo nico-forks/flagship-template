@@ -152,7 +152,8 @@ export const en: ProjectTranslationKeys = {
       },
       addToCart: {
         actionBtn: 'Add to Cart'
-      }
+      },
+      shareBtn: 'Share Item'
     }
   },
   search: {
@@ -333,6 +334,8 @@ export const en: ProjectTranslationKeys = {
       reviewsTitle: 'Details',
       recentlyViewed: 'Recently Viewed',
       loadMore: 'Load More',
+      shippingReturns: 'Shipping & Returns',
+      details: 'Details',
       qa: {
         time: '{{time}} ago',
         answer: {
@@ -355,6 +358,7 @@ export const en: ProjectTranslationKeys = {
     },
     shop: {
       title: 'Shop',
+      sectionTitle: 'Shop Now',
       shopByCategoryBtn: commonButtons.shopByCategory,
       shopTopBtn: 'Shop Top Categories',
       shopAllBtn: 'Shop All Categories',

@@ -1,5 +1,5 @@
-const common = require('./common');
+const episerver = require('./env.episerver');
 
 module.exports = {
-  ...common
+  ...episerver
 };
