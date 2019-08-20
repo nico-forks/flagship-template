@@ -24,11 +24,6 @@ import ChangePassword from './screens/ChangePassword';
 import EmailSignUp from './screens/EmailSignUp';
 import LeftDrawerMenu from './screens/LeftDrawerMenu';
 import Search from './screens/Search';
-import BreadCrumbsSample from './screens/BreadCrumbsSample';
-import AccordionSample from './screens/AccordionSample';
-import ActionBarSample from './screens/ActionBarSample';
-import ImageWithOverlaySample from './screens/ImageWithOverlaySample';
-import CartCountSample from './screens/CartCountSample';
 import Contact from './screens/Contact';
 import Home from './screens/Home';
 import AppBuilder from './screens/AppBuilder';
@@ -58,11 +53,6 @@ export default {
   EmailSignUp,
   ChangePassword,
   Search,
-  BreadCrumbsSample,
-  AccordionSample,
-  ActionBarSample,
-  ImageWithOverlaySample,
-  CartCountSample,
   Contact,
   Home,
   EngagementComp,

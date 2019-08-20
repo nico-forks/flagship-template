@@ -152,6 +152,7 @@ interface Item<KeyType> {
     addToCart: {
       actionBtn: KeyType;
     };
+    shareBtn: KeyType;
   };
 }
 
@@ -292,6 +293,8 @@ interface Screens<KeyType> {
     reviewsTitle: KeyType;
     recentlyViewed: KeyType;
     loadMore: KeyType;
+    shippingReturns: KeyType;
+    details: KeyType;
     qa: {
       time: KeyType;
       answer: KeyType;
@@ -299,6 +302,7 @@ interface Screens<KeyType> {
     };
   };
   shop: ScreenTitle<KeyType> & {
+    sectionTitle: KeyType;
     shopByCategoryBtn: KeyType;
     shopAllBtn: KeyType;
     shopTopBtn: KeyType;

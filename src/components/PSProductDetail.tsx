@@ -529,7 +529,7 @@ class PSProductDetailComponent extends Component<
         >
           <Image source={icons.share} />
           <Text style={{marginLeft: 10, fontSize: 16, textDecorationLine: 'underline'}}>
-            Share This Product
+            {translate.string(translationKeys.item.actions.shareBtn)}
           </Text>
         </View>
       );
@@ -714,7 +714,7 @@ class PSProductDetailComponent extends Component<
               <Accordion
                 title={
                   <Text style={GlobalStyle.h2}>
-                    {'Details'}
+                    {translate.string(translationKeys.screens.productDetail.details)}
                   </Text>}
                 content={
                   <PSHTMLView
@@ -735,7 +735,7 @@ class PSProductDetailComponent extends Component<
               <Accordion
                 title={
                   <Text style={GlobalStyle.h2}>
-                    {'Shipping & Returns'}
+                    {translate.string(translationKeys.screens.productDetail.shippingReturns)}
                   </Text>}
                 content={
                   <View style={{marginBottom: 10}}>

@@ -1,35 +1,58 @@
 module.exports = {
-  desktopHost: 'https://www.brandingbrand.com',
-  name: 'EpiserverDemo',
-  displayName: 'EpiserverDemo',
-  enabledCapabilitiesIOS: [],
+  /**
+   * @todo Replace with your app's internal name
+   */
+  name: 'FlagshipTemplate',
+  /**
+   * @todo Replace with your app's user-facing name
+   */
+  displayName: 'FlagshipTemplate',
+  /**
+   * @todo Replace with your app's iOS and Android bundle identifier strings
+   */
+  bundleIds: {
+    android: 'com.brandingbrand.reactnative.and.flagshiptemplate',
+    ios: 'com.brandingbrand.reactnative.flagshiptemplate',
+  },
+  /**
+   * @todo Provide paths to your build certificates and keystore
+   * @see https://github.com/brandingbrand/flagship/wiki/Signing-Your-Apps
+   */
   buildConfig: {
     ios: {
-      exportTeamId: '762H5V79XV',
-      deployScheme: 'Provisioned',
-      appCertDir: 'episerverDemo',
-      provisioningProfileName: 'Episerver Demo Distribution'
-    }
-  },
-  launchScreen: {
-    android: 'assets/launchScreen/android',
-    ios: {
-      images: 'assets/launchScreen/ios/LaunchImages.xcassets',
-      xib: 'assets/launchScreen/ios/LaunchScreen.xib'
-    }
-  },
-  dataSource: {
-    type: 'episerver',
-    categoryFormat: 'list',
-    catalogName: 'Fashion',
-    apiConfig: {
-      apiHost: 'https://episerver.uat.bbhosted.com',
+      appleCert: '../path/to/apple.cer',
+      distCert: '../path/to/dist.cer',
+      distP12: '../path/to/dist.p12',
+      profilesDir: '../path/to/profiles'
     },
-    promoProducts: {
-      categoryId: 'shirts',
-      title: 'Recommended for You'
+    android: {
+      storeFile: '../path/to/store.keystore',
+      keyAlias: 'name of alias'
     }
   },
+  /**
+   * @todo Provide paths to your launch screen assets
+   * @see https://github.com/brandingbrand/flagship/wiki/Creating-Launch-Screens
+   */
+  // launchScreen: {
+  //   android: 'assets/launchScreen/android',
+  //   ios: {
+  //     images: 'assets/launchScreen/ios/LaunchImages.xcassets',
+  //     xib: 'assets/launchScreen/ios/LaunchScreen.xib'
+  //   }
+  // },
+  /**
+   * @todo Provide assets for your application's homescreen icon
+   * @see https://github.com/brandingbrand/flagship/wiki/Creating-App-Icons
+   */
+  // appIconDir: {
+  //   android: 'assets/appIcon/android',
+  //   ios: 'assets/appIcon/ios'
+  // },
+  /**
+   * @todo Provide a URL for fallback webview screens
+   */
+  desktopHost: 'https://www.brandingbrand.com',
   entitlementsFileIOS: './uat.entitlements',
   googleAnalytics: {
     android: '',
@@ -37,27 +60,8 @@ module.exports = {
   },
   cmsEnvironment: 1,
   cmsPropertyId: 482,
-  dataSourceConfigs: {
-    bazaarVoice: {
-      endpoint: 'https://api.bazaarvoice.com',
-      passkey: ''
-    }
-  },
   apiHost: 'https://api.example.com',
-  publicVersionNumber: '1.0.0',
   require: [],
-  appIds: {
-    android: 'com.brandingbrand.reactnative.and.episerverdemo',
-    ios: 'com.brandingbrand.reactnative.episerverdemo',
-  },
-  appIconDir: {
-    android: 'assets/appIcon/android',
-    ios: 'assets/appIcon/ios'
-  },
-  bundleIds: {
-    android: 'com.brandingbrand.reactnative.and.episerverdemo',
-    ios: 'com.brandingbrand.reactnative.episerverdemo',
-  },
   engagement: {
     baseURL: 'https://kong.uat.bbhosted.com/engagement/v1',
     cacheTTL: 0,
@@ -107,5 +111,6 @@ module.exports = {
     }
   ],
   associatedDomains: [],
-  targetedDevices: 'Universal'
+  targetedDevices: 'Universal',
+  enabledCapabilitiesIOS: []
 };
