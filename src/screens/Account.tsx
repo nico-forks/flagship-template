@@ -120,7 +120,7 @@ class Account extends Component<AccountScreenProps, AccountScreenState> {
     }
   }
 
-  componentWillMount(): void {
+  componentDidMount(): void {
     Dimensions.addEventListener('change', this.handleDimensionChange);
   }
 
