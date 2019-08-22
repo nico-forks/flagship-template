@@ -26,7 +26,6 @@ import LeftDrawerMenu from './screens/LeftDrawerMenu';
 import Search from './screens/Search';
 import Contact from './screens/Contact';
 import Home from './screens/Home';
-import AppBuilder from './screens/AppBuilder';
 import { EngagementComp } from './lib/engagement';
 
 export default {
@@ -55,6 +54,5 @@ export default {
   Search,
   Contact,
   Home,
-  EngagementComp,
-  AppBuilder
+  EngagementComp
 };

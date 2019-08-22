@@ -36,12 +36,6 @@ const appConfig: FSAppTypes.AppConfigType = {
       label: 'Inbox',
       title: 'Inbox',
       icon: require('../assets/images/inbox.png')
-    },
-    {
-      screen: 'AppBuilder',
-      label: 'App Builder',
-      title: 'App Builder',
-      icon: require('../assets/images/contact-tab.png')
     }
   ],
   tabsStyle: tabBarDefault,
