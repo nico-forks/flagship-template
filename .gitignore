@@ -74,3 +74,4 @@ docs/
 /web
 env/env.js
 /app-builds
+/web-compiled
