@@ -13,11 +13,13 @@
     "init": "flagship clean && flagship init native",
     "init:web": "flagship clean && flagship init web",
     "ios": "run-p start tsc:watch compile-ios",
-    "lint": "fscodestyle",
     "prepare": "tsc",
-    "precommit": "lint-staged",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "tsc:watch": "tsc -w --preserveWatchOutput"
+    "tsc:watch": "tsc -w --preserveWatchOutput",
+    "lint": "fscodestyle",
+    "lint-staged": "lint-staged",
+    "tsc": "tsc",
+    "precommit": "run-s tsc lint-staged"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
@@ -73,11 +75,17 @@
     "@types/react-native-push-notification": "^3.0.2",
     "@types/react-native-touch-id": "^4.0.0",
     "@types/react-redux": "^6.0.0",
-    "lint-staged": "^7.2.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
     "npm-run-all": "^4.1.3",
     "typescript": "~3.0.1"
   },
   "main": "index.js",
   "repository": "git@github.com:brandingbrand/flagship-template.git",
-  "author": "Branding Brand"
+  "author": "Branding Brand",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn lint"
+    ]
+  }
 }
