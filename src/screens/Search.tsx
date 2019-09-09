@@ -144,7 +144,7 @@ class Search extends Component<SearchProps, SearchState> {
             containerStyle: GlobalStyle.searchBarInner,
             inputTextStyle: GlobalStyle.searchBarInputTextStyle,
             placeholder: 'Search',
-            showCancel:true,
+            showCancel: true,
             inputProps: {
               value: this.state.keyword === ' ' ? '' : this.state.keyword,
               autoCorrect: false,
