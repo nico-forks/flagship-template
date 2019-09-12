@@ -5,7 +5,7 @@
   "scripts": {
     "add-keys-android": "node node_modules/@brandingbrand/flagship/dist/add-keys-android-internal.js",
     "add-keys-ios": "node node_modules/@brandingbrand/flagship/dist/add-keys-ios-internal.js",
-    "android": "run-p start tsc:watch compile-android",
+    "android": "run-s compile-android start-dev",
     "build-web": "./scripts/buildWeb.sh",
     "compile-android": "react-native run-android --no-packager",
     "compile-ios": "react-native run-ios --simulator \"iPhone X\" --no-packager",
@@ -15,6 +15,7 @@
     "ios": "run-p start tsc:watch compile-ios",
     "prepare": "tsc",
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start-dev": "run-p tsc:watch start",
     "tsc:watch": "tsc -w --preserveWatchOutput",
     "lint": "fscodestyle",
     "lint-staged": "lint-staged",
