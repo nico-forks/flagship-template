@@ -7638,11 +7638,6 @@ react-native-safe-area@^0.5.0:
   dependencies:
     "@types/react" "^16.8.8"
 
-react-native-sensitive-info@^5.2.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/react-native-sensitive-info/-/react-native-sensitive-info-5.5.0.tgz#90d32b0ac02f20c2f71eec109024b01adb8114bb"
-  integrity sha512-ZEebxnPdianNi+zUowy48LvqDRul2w6K0SCp1SYW80nInQuzwZ/wAqA2sfT7FuqVJ4faP1mDUJwt/7LZTZqApQ==
-
 react-native-sensitive-info@~5.4.0:
   version "5.4.2"
   resolved "https://registry.yarnpkg.com/react-native-sensitive-info/-/react-native-sensitive-info-5.4.2.tgz#d2454991707927f27b5cdedfe21a07f30a5afd22"
