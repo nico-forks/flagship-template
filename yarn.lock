@@ -838,10 +838,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@brandingbrand/flagship@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/flagship/-/flagship-5.3.0.tgz#df3b94ad5ef46af277a3f7d6e2f00709bbf9f706"
-  integrity sha512-thw+Zdo9fsfl8X06F2I66xHU9Urq6IxlqpRzMfEBFXYszGj+dD1CskV6IPZNifAgdyhXtR5zWPlfZP7ne9OyPw==
+"@brandingbrand/flagship@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/flagship/-/flagship-6.1.4.tgz#32db9077bd68d46494868dd066a58b447c49467e"
+  integrity sha512-jqk3QbVSZ90vPaAahU2zxAIhKdhG+TrigPsUKmNe2ot41Yc4eIU644MiU2MdgZC7v6Rxk0w1g5GoyUJtmXmWuw==
   dependencies:
     fs-extra "^8.0.0"
     glob "^7.1.2"
@@ -852,14 +852,14 @@
     replace-in-file "^4.1.0"
     yargs "^12.0.1"
 
-"@brandingbrand/fsapp@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsapp/-/fsapp-5.3.0.tgz#07b81a96cc0650419c70ac9eee29fff133fdd70f"
-  integrity sha512-fhAMLdVcoVREyw2UHCx4jrwQiKezHBqBxa7N36JqfCr7JTLPH/dn9L1N3BM+tZzW2Z5syASrYXvSmW38U+KRCg==
+"@brandingbrand/fsapp@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsapp/-/fsapp-6.1.4.tgz#59402e9076182b05b4ecc33221256c9d7335a6ed"
+  integrity sha512-D+FmqMWqeVo9yEjDja7M18xFCfmlfTHfAortl6QlyI/Fx8DaraBX5dVsaeY3aPa3nAkScXQeiMKhjIKtoUKk8g==
   dependencies:
-    "@brandingbrand/fsengage" "^5.3.0"
-    "@brandingbrand/fsfoundation" "^5.3.0"
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fsengage" "^6.1.4"
+    "@brandingbrand/fsfoundation" "^6.1.4"
+    "@brandingbrand/fsnetwork" "^6.1.4"
     "@react-native-community/async-storage" "^1.6.1"
     path-to-regexp "^2.2.1"
     qs "^6.7.0"
@@ -877,21 +877,21 @@
     redux-logger "^3.0.6"
     redux-thunk "^2.2.0"
 
-"@brandingbrand/fsbazaarvoice@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsbazaarvoice/-/fsbazaarvoice-5.3.0.tgz#a58927f952a5e60ce27ecd4de545ea2427f160e9"
-  integrity sha512-GLsr8bUH9tMXnZ+zk9116esxmVVPzGxM9Aof9tp/cS1rFnr1e9Z2wm3YcIFlvP5vu8e3v50OnCR52s1gv8KInQ==
+"@brandingbrand/fsbazaarvoice@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsbazaarvoice/-/fsbazaarvoice-6.1.4.tgz#407c44d5028eaacb846497567fa04b0571f7db1f"
+  integrity sha512-gBzdkfEN+qqPXHWBDFQ1lyvIawwUFR4FWNxj4yZ89Up7fND9T0deQdRxsKGHnXvegkD2IsX9ukaBDKonF3IJ/A==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
+    "@brandingbrand/fsnetwork" "^6.1.4"
 
-"@brandingbrand/fscategory@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fscategory/-/fscategory-5.3.0.tgz#ae62b8e9be14273a24763870b0d04f5153da7fa1"
-  integrity sha512-towJJEfgvebXujLdYNXfMRhM3xUaconSL3GCA6c7uwrmMz/5mL5qEpVyQm+tI1U1TXuPAgwFKMQVq7AM3ILJlg==
+"@brandingbrand/fscategory@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fscategory/-/fscategory-6.1.4.tgz#36aea8df2aac7e443534e1bf39e2365d8399fc61"
+  integrity sha512-fuKfDWJaWFKeZP2kLndOWLeLTIUDmtsDZhMhOE+KOOtSRT9usarg4qTn7woa3f4JOjjugJp/uRW9B1Y8Gs9fdA==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
-    "@brandingbrand/fscomponents" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
+    "@brandingbrand/fscomponents" "^6.1.4"
     react "16.8.3"
     react-native "0.59.10"
 
@@ -904,14 +904,14 @@
     tslint-eslint-rules "^5.4.0"
     tslint-react "^3.6.0"
 
-"@brandingbrand/fscommerce@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fscommerce/-/fscommerce-5.3.0.tgz#c8beff8442f05851d0c8fd36bcf013872af0c929"
-  integrity sha512-bQk2lzQJHCVgyQoF1sgBL8bqe3oo6bLspWJzv6c7acpMr1mk0kkWkhmPYbAacHXa1JKgpvd+c7Rgms0+pCm6Xw==
+"@brandingbrand/fscommerce@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fscommerce/-/fscommerce-6.1.4.tgz#047609969b568bb5beeff4cb05eb737679bd1bb4"
+  integrity sha512-7+GKVBuf6+mVHb6a/OAaaAGdU+Ggg9gYw/hfiYeaM8FmX6XDM5y2aHv0vO/sE6seLM//uOvgZcE29N9BWwjoew==
   dependencies:
-    "@brandingbrand/fsengage" "^5.3.0"
-    "@brandingbrand/fsfoundation" "^5.3.0"
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fsengage" "^6.1.4"
+    "@brandingbrand/fsfoundation" "^6.1.4"
+    "@brandingbrand/fsnetwork" "^6.1.4"
     decimal.js "^10.0.1"
     lodash-es "^4.17.10"
     qs "^6.7.0"
@@ -920,16 +920,16 @@
     react-native-cookies "^3.3.0"
     react-native-sensitive-info "~5.4.0"
 
-"@brandingbrand/fscomponents@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fscomponents/-/fscomponents-5.3.0.tgz#8b7c6aff0b05b06dbbb527cb8f52a1071b5a3f52"
-  integrity sha512-2uFdy8U34qMAt7cXRfNi8GPHqiaNZEjLW/EYSI+ti0ze5rmRG+Vz5fR/OIS/vQhDQ3Xi0x7z9u4qLS+vSBK9bw==
+"@brandingbrand/fscomponents@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fscomponents/-/fscomponents-6.1.4.tgz#c5ae53af6fe8f3b651b0643705fade3fc2c36a5d"
+  integrity sha512-fIbUPK2xiJXMctuQFfyppnf7iWskBOkrkx4NZT3PWyLwhb3u8eitytnp2GnggTt6WrHhRpDKK9kLdxsXyTyaiQ==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
-    "@brandingbrand/fsengage" "^5.3.0"
-    "@brandingbrand/fsfoundation" "^5.3.0"
-    "@brandingbrand/fsi18n" "^5.3.0"
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
+    "@brandingbrand/fsengage" "^6.1.4"
+    "@brandingbrand/fsfoundation" "^6.1.4"
+    "@brandingbrand/fsi18n" "^6.1.4"
+    "@brandingbrand/fsnetwork" "^6.1.4"
     "@react-native-community/async-storage" "^1.6.1"
     credit-card "^3.0.1"
     decimal.js "^10.0.1"
@@ -949,13 +949,13 @@
     sweetalert "^2.1.0"
     tcomb-form-native "^0.6.12"
 
-"@brandingbrand/fsengage@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsengage/-/fsengage-5.3.0.tgz#187126b6f233879cf4abc550d83f9eb9fe955b1a"
-  integrity sha512-oIXemvsJfld/r8Atb5gRkF3t/jonXl6/JBPjN1V766WBJBdsaJuJljX5VL2a51UrC1UaWphzE+XOO/vng/3SBg==
+"@brandingbrand/fsengage@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsengage/-/fsengage-6.1.4.tgz#3b3969baf38761672f636cd68b98c16290eeccac"
+  integrity sha512-S/WRvcBU2WsygSc4oTgO6blYkIqKy0j+YatvfCSqLYR9GAHj6dvcW8mIMqzZ6PAk/Uy55Wa5U5iyZm0m4mpSHw==
   dependencies:
-    "@brandingbrand/fsfoundation" "^5.3.0"
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fsfoundation" "^6.1.4"
+    "@brandingbrand/fsnetwork" "^6.1.4"
     "@brandingbrand/react-native-adobe-marketing-cloud" "^0.1.1"
     "@brandingbrand/react-native-google-analytics" "^2.1.0"
     "@brandingbrand/react-native-leanplum" "^1.0.1"
@@ -965,12 +965,12 @@
     react-native-permissions "~1.1.1"
     url-parse "^1.4.3"
 
-"@brandingbrand/fsengagement@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsengagement/-/fsengagement-5.3.0.tgz#87bbed3477ca2ec8ed4f99df38902fb497df34a7"
-  integrity sha512-vnQl52MbZRW/O4KUIJZisWbCwEKqbzm+QcdvyHb1I65ylPTkgKDzTLsYTTF3OvxkbH9Pu3jT0sYpo5junFLswQ==
+"@brandingbrand/fsengagement@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsengagement/-/fsengagement-6.1.4.tgz#a42e525d9d4bd033628591590e73d77264492c9c"
+  integrity sha512-FbolOjesKMo4xdKjLnputIJCi0y1+3PwYEd2fkzwqDAYko04IQ4D4oGqFCgLbl2TzPpeW9ljYFd7b3PJ19PJ7w==
   dependencies:
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fsnetwork" "^6.1.4"
     "@react-native-community/async-storage" "^1.6.1"
     "@types/prop-types" "15.5.3"
     "@types/react-native-snap-carousel" "^3.7.3"
@@ -991,97 +991,97 @@
   resolved "https://registry.yarnpkg.com/@brandingbrand/fsfoundation/-/fsfoundation-0.1.0.tgz#4fbd3a497d6c6c8f7488bc79ea5a5d79fd55f35f"
   integrity sha512-S4Wx+NAX1y+qSxI9Pjbn9rQWEw2lHTujh4dSAU8Ya4tPbTp1ATiJk0iWQQb0m4sGVX39tn43c3i78i0rbK5O3g==
 
-"@brandingbrand/fsfoundation@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsfoundation/-/fsfoundation-5.3.0.tgz#f7647e4d406ac89f9963e3e44b861767750aa715"
-  integrity sha512-lwJbBB4+Q3sBGtxYE/la4pHyvAkNYdufdPKkB+cEE9QbXoUOgvAoYhgeXXfvvHp4zUtJTvbismOwEnyHeUgVpQ==
+"@brandingbrand/fsfoundation@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsfoundation/-/fsfoundation-6.1.4.tgz#18624525628471b10be73a2de2d7a1bb09b404c2"
+  integrity sha512-oWRtlXAC+N8Pv12XQYq1vdArQofEzszim+Fuyr4u7Z+H8+iZ6hJvazsnRScMgAER66V6DoAV7EpjawlZtC6o1g==
 
-"@brandingbrand/fsi18n@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsi18n/-/fsi18n-5.3.0.tgz#d01effb37d891168e79e6ad72da181d1829a2ca7"
-  integrity sha512-7ei5aC514L+X3lwdUW0QrmW7v0HJxCW6T16AOladiBCzFESJMAVDIc3pHLtMLyJgqp3NRecl9RR2gpy4Pv5a4g==
+"@brandingbrand/fsi18n@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsi18n/-/fsi18n-6.1.4.tgz#575e77ccf9ec31a4876c24887028bdaadfb1cda7"
+  integrity sha512-Bielzn4kbIOKc2NwQhMENAhDmVKcoRYFZX/x3Bj7VzotJVkdARL4H0V6NljXqeLzXMzJ6hYSj6NVtoKFOG9aLg==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
     decimal.js "^10.0.1"
     i18n-js "^3.0.8"
     lodash-es "^4.17.10"
     react-native-i18n "^2.0.15"
 
-"@brandingbrand/fsmockdatasources@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsmockdatasources/-/fsmockdatasources-5.3.0.tgz#3f3ebd311e4b1454e6963d8ab98a88db5dc824bd"
-  integrity sha512-LLRgOjsq8BUPHoPsjEOx7GK3j7ZFn9zOesQT2NtkDrkcFfFXvCJ2BL6RDBR6TfZ9eKpSfCEM99k3neOmeZKBFw==
+"@brandingbrand/fsmockdatasources@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsmockdatasources/-/fsmockdatasources-6.1.4.tgz#f5af42e3a2a4e78aa082ce7d0ce539ede6c93548"
+  integrity sha512-SqbqHnT1ig4D1AusYFhh3gEi0Q300CoinAxRAat0MBzb7mRgNVRYhksNXq+/dKjuG1I+6A2htQ/ROsx2uLhsYw==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
-    "@brandingbrand/fsfoundation" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
+    "@brandingbrand/fsfoundation" "^6.1.4"
     decimal.js "^10.0.1"
     faker "^4.1.0"
 
-"@brandingbrand/fsnetwork@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsnetwork/-/fsnetwork-5.3.0.tgz#124b3f26ea25b3d5c708eb349626d6c73e00d56a"
-  integrity sha512-hQKbjesc/L6FUldKWWqbRMTRIhN1On4nZzXHxopPrRmZn2AdfgWkJ5zs0e9JHPP5RmHuKqm//4jYgqq2f1iQbw==
+"@brandingbrand/fsnetwork@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsnetwork/-/fsnetwork-6.1.4.tgz#a9677e5eeaa7b90a4d860c6bd0cc740942071799"
+  integrity sha512-AloUfSWB9jCbwj86ZEsXVrbgxpVPeMpi5MKuWVvzXKzxtJnuk15Cky1zDCj+PQRalOHIGTjDCxOMzUKlZ293iA==
   dependencies:
-    "@brandingbrand/fsfoundation" "^5.3.0"
+    "@brandingbrand/fsfoundation" "^6.1.4"
     axios "~0.18.1"
 
-"@brandingbrand/fsproductdetail@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsproductdetail/-/fsproductdetail-5.3.0.tgz#483353c512423a89b4a4549e3d6e78cb513fbeb5"
-  integrity sha512-8lRYtCyEjSDq6iPVoYDbJ8dypEnPMr35wXw0ssy0hT8OZ7DUmA+TsA2E9YkmKyxn8ap9JhgGDZmhudz0tA42AA==
+"@brandingbrand/fsproductdetail@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsproductdetail/-/fsproductdetail-6.1.4.tgz#8d8f02e63c34a73b847248cec6fc7148b19315d3"
+  integrity sha512-zDHH3tziWpLLK/3IpOlBATEI57lE1OYE9tFBGj0+FvHA4G1wRWlnD0G9J2VRUl6UWd2yw577SgtsZ/+wK7y5uA==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
     lodash-es "^4.17.10"
     react "16.8.3"
     react-native "0.59.10"
     redux "^4.0.0"
 
-"@brandingbrand/fsproductindex@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsproductindex/-/fsproductindex-5.3.0.tgz#02450614e6605cdac8dc4caef0b845a211a06c6d"
-  integrity sha512-IGYSdUf9VGU3KrrEPbGY5gFSmqYfKRm+rJB/HGLgZCUCCVyi9XSQwQqB8ix70THVgHRwMM3PfZMj0nQ8oCmgqg==
+"@brandingbrand/fsproductindex@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsproductindex/-/fsproductindex-6.1.4.tgz#8b0b7e7b65c5c83deb6dcd902ed04822a4c22f4b"
+  integrity sha512-xAFgBkMTV85ZOV4jAPjOsBgC3mE6ejxOtZ6z0Y6EGxaXOOctrQAMjilqTyZNPDU7TBj/4DHHqeVY1Hps8dOWGA==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
-    "@brandingbrand/fscomponents" "^5.3.0"
-    "@brandingbrand/fsi18n" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
+    "@brandingbrand/fscomponents" "^6.1.4"
+    "@brandingbrand/fsi18n" "^6.1.4"
     lodash-es "^4.17.10"
     pluralize "^8.0.0"
     react "16.8.3"
     react-native "0.59.10"
     redux "^4.0.0"
 
-"@brandingbrand/fssalesforce@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fssalesforce/-/fssalesforce-5.3.0.tgz#69536b43e7100210de388372328b5b162fe87ed7"
-  integrity sha512-wknAaxALA/2Gn5CafnREtzWflp0XiZNKUSS9GFEciLNpHVGBT/5SgHPQ4DtQvveZ4cE9SGsdWfzTSsq3JqZ9bg==
+"@brandingbrand/fssalesforce@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fssalesforce/-/fssalesforce-6.1.4.tgz#8d05c772c8bb19b4c64fa081b2ac1bb00a51b4b9"
+  integrity sha512-VVBktva295YmKNKepvV+mSgFOEudsfLsbYeRbP6BgeuKI4HuspBunZSvI4is52AGhG7gMC+LUvzUp2HFR53cNQ==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
-    "@brandingbrand/fsfoundation" "^5.3.0"
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
+    "@brandingbrand/fsfoundation" "^6.1.4"
+    "@brandingbrand/fsnetwork" "^6.1.4"
     decimal.js "^10.0.1"
     dtsgenerator "^2.0.7"
     jwt-decode "^2.2.0"
     qs "^6.7.0"
 
-"@brandingbrand/fsshopify@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsshopify/-/fsshopify-5.3.0.tgz#d4709f537ad92407e8f87b538abd36639dc5032a"
-  integrity sha512-C02EJKrGTosSYsZWqRTN2kXp58KMQL2PDiPpIn38+n5FhnB9eoKTBV8azgPNa+3rZtVeB8cZso+AQAHZmQz2tQ==
+"@brandingbrand/fsshopify@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsshopify/-/fsshopify-6.1.4.tgz#64cfe380f257299065f8ed2174b5812b12014e72"
+  integrity sha512-hkW7zZwhA35sl+jUkQ7R+zrMIimUUSf+QXgkjN7X4iTDV9oqVZQIGlkiZ3lR5K7RJO62/otsuTg9WvLUWNStbg==
   dependencies:
-    "@brandingbrand/fscommerce" "^5.3.0"
-    "@brandingbrand/fsfoundation" "^5.3.0"
-    "@brandingbrand/fsi18n" "^5.3.0"
-    "@brandingbrand/fsnetwork" "^5.3.0"
+    "@brandingbrand/fscommerce" "^6.1.4"
+    "@brandingbrand/fsfoundation" "^6.1.4"
+    "@brandingbrand/fsi18n" "^6.1.4"
+    "@brandingbrand/fsnetwork" "^6.1.4"
     decimal.js "^10.0.1"
     react "16.8.3"
     react-native "0.59.10"
     react-native-navigation "https://github.com/brandingbrand/react-native-navigation#v1"
     react-native-payments "^0.7.0"
 
-"@brandingbrand/fsweb@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@brandingbrand/fsweb/-/fsweb-5.3.0.tgz#a4a48854dbd74355003eb854f49cc53e09134f1e"
-  integrity sha512-msOPIn4u8N66m8FW+AQNTrgBa/0CtregxHXAhY8yhUb1a5vX9tHzCVSW2NprZJ/NmZrknc1kWqI2YCRvItB/bA==
+"@brandingbrand/fsweb@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@brandingbrand/fsweb/-/fsweb-6.1.4.tgz#c8718d06e8d7a5b92e42cf29095e2a10ca8eadb3"
+  integrity sha512-5tAOB1cNMfkOX+HUZLaEkEDyJ/un2CPSNzFl6jkvN8MZuODGAwo2nR91GHZgomMHBbyMsClo7xjWoWmI78GCKw==
   dependencies:
     "@babel/core" "^7.4.5"
     "@babel/polyfill" "^7.0.0"
@@ -1105,7 +1105,7 @@
     sw-precache-webpack-plugin "^0.11.5"
     ts-loader "^4.3.0"
     uglifyjs-webpack-plugin "^1.3.0"
-    webpack "^4.16.5"
+    webpack "4.39.3"
     webpack-bundle-size-analyzer "^2.7.0"
     webpack-cli "^3.0.8"
     webpack-hot-client "^4.0.4"
@@ -1547,10 +1547,10 @@ accepts@^1.3.5, accepts@~1.3.5, accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-acorn@^6.2.0:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.2.1.tgz#3ed8422d6dec09e6121cc7a843ca86a330a86b51"
-  integrity sha512-JD0xT5FCRDNyjDda3Lrg/IxFscp9q4tiYtxE1/nOzlKCk7hIRuYjhq1kCNkbPjMRMZuFq20HNQn1I9k8Oj0E+Q==
+acorn@^6.2.1:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.3.0.tgz#0087509119ffa4fc0a0041d1e93a417e68cb856e"
+  integrity sha512-/czfa8BwS88b9gWQVhc8eknunSA2DoJpJyTQkhheIf5E48u1N0R4q/YxxsAeqRrmK9TQ/uYfgLDfZo91UlANIA==
 
 aggregate-error@^3.0.0:
   version "3.0.0"
@@ -1565,12 +1565,12 @@ ajv-errors@^1.0.0:
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz#f35986aceb91afadec4102fbd85014950cefa64d"
   integrity sha512-DCRfO/4nQ+89p/RK43i8Ezd41EqdGIU4ld7nGF8OQ14oc/we5rEntLCUa7+jrn3nn83BosfwZA0wb4pon2o8iQ==
 
-ajv-keywords@^3.1.0:
+ajv-keywords@^3.1.0, ajv-keywords@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.4.1.tgz#ef916e271c64ac12171fd8384eaae6b2345854da"
   integrity sha512-RO1ibKvd27e6FEShVFfPALuHI3WjSVNeK5FIsmme/LYRNxjKuNj+Dt7bucLa6NdSv3JcVTyMlm9kGR84z1XpaQ==
 
-ajv@^6.1.0:
+ajv@^6.1.0, ajv@^6.10.2:
   version "6.10.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.2.tgz#d3cea04d6b017b2894ad69040fec8b623eb4bd52"
   integrity sha512-TXtUUEYHuaTEbLZWIKUr5pmBuhDLy+8KYtPYdcV8qC+pOZL+NKqYwvWSRrVXHn+ZmRRAu8vJTAznH7Oag6RVRw==
@@ -2403,7 +2403,7 @@ chownr@^1.0.1, chownr@^1.1.1:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.1.2.tgz#a18f1e0b269c8a6a5d3c86eb298beb14c3dd7bf6"
   integrity sha512-GkfeAQh+QNy3wquu9oIZr6SS5x7wGdSgNQvD10X3r+AZr1Oys22HW8kAmDMvNg2+Dm0TeGaEuO8gFwdBXxwO8A==
 
-chrome-trace-event@^1.0.0:
+chrome-trace-event@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/chrome-trace-event/-/chrome-trace-event-1.0.2.tgz#234090ee97c7d4ad1a2c4beae27505deffc608a4"
   integrity sha512-9e/zx1jw7B4CO+c/RXoCsfg/x1AfUBioy4owYH0bJprEYAx5hRFLRhWBqHAG57D0ZM4H7vxbP7bPe0VwhQRYDQ==
@@ -3418,7 +3418,7 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-scope@^4.0.0:
+eslint-scope@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.3.tgz#ca03833310f6889a3264781aa82e63eb9cfe7848"
   integrity sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg==
@@ -5422,12 +5422,12 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
-loader-runner@^2.3.0:
+loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
   integrity sha512-Jsmr89RcXGIwivFY21FcRrisYZfvLMTWx5kOLc+JTxtpBOG6xML0vzbc6SEQG2FO9/4Fc3wW4LVcB5DmGflaRw==
 
-loader-utils@1.2.3, loader-utils@^1.0.2, loader-utils@^1.1.0:
+loader-utils@1.2.3, loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
   integrity sha512-fkpz8ejdnEMG3s37wGL07iSBDg99O9D5yflE9RGNH3hRdx9SOwYfnGYdZOUIZitN8E+E2vkq3MUMYMvPYl5ZZA==
@@ -5703,7 +5703,7 @@ memoize-one@^4.0.2:
   resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-4.1.0.tgz#a2387c58c03fff27ca390c31b764a79addf3f906"
   integrity sha512-2GApq0yI/b22J2j9rhbrAlsHb0Qcz+7yWxeLG8h+95sl1XPUgeLimQSOdur4Vw7cUhrBHwaUZxWFZueojqNRzA==
 
-memory-fs@^0.4.0, memory-fs@^0.4.1, memory-fs@~0.4.1:
+memory-fs@^0.4.0, memory-fs@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/memory-fs/-/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
   integrity sha1-OpoguEYlI+RHz7x+i7gO1me/xVI=
@@ -6106,7 +6106,7 @@ micromatch@^2.3.11:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4, micromatch@^3.1.8:
+micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   integrity sha512-MWikgl9n9M3w+bpsY3He8L+w9eF9338xRl8IAO5viDizwSzziFEyUzo2xrrloB64ADbTf8uA8vRqqttDTOmccg==
@@ -6287,7 +6287,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
+mkdirp@^0.5.0, mkdirp@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
@@ -6421,7 +6421,7 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
-neo-async@^2.5.0:
+neo-async@^2.5.0, neo-async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
@@ -6461,7 +6461,7 @@ node-int64@^0.4.0:
   resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
   integrity sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=
 
-node-libs-browser@^2.0.0:
+node-libs-browser@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-2.2.1.tgz#b64f513d18338625f90346d27b0d235e631f6425"
   integrity sha512-h/zcD8H9kaDZ9ALUWwlBUDo6TKF8a7qBSCSEGfjTVIYeqsioSKaAX+BN7NgiMGp6iSIXZ3PxgCu8KS3b71YK5Q==
@@ -7605,6 +7605,12 @@ react-native-masked-text@^1.7.1:
   dependencies:
     moment "2.19.3"
     tinymask "^1.0.2"
+
+"react-native-navigation@git+https://github.com/brandingbrand/react-native-navigation.git#v1":
+  version "1.1.486"
+  resolved "git+https://github.com/brandingbrand/react-native-navigation.git#af36480b4d137501f881dded8260b0540c9cf405"
+  dependencies:
+    lodash "4.x.x"
 
 "react-native-navigation@https://github.com/brandingbrand/react-native-navigation#v1":
   version "1.1.486"
@@ -8941,7 +8947,7 @@ symbol-observable@^1.1.0, symbol-observable@^1.2.0:
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
-tapable@^1.0.0, tapable@^1.1.0:
+tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
   integrity sha512-4WK/bYZmj8xLr+HUCODHGF1ZFzsYffasLUgEiMBY4fgtltdO6B4WJtlSbPaDTLpYTcGVwM2qLnFTICEcNxs3kA==
@@ -8993,7 +8999,7 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-terser-webpack-plugin@^1.1.0:
+terser-webpack-plugin@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.4.1.tgz#61b18e40eaee5be97e771cdbb10ed1280888c2b4"
   integrity sha512-ZXmmfiwtCLfz8WKZyYUuuHf3dMYEjg8NrjHMb0JqHVHVOSkzp3cW2/XG1fP3tRhqEqSzMwzzRQGtAPbs4Cncxg==
@@ -9578,7 +9584,7 @@ watch@~0.18.0:
     exec-sh "^0.2.0"
     minimist "^1.2.0"
 
-watchpack@^1.5.0:
+watchpack@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.6.0.tgz#4bc12c2ebe8aa277a71f1d3f14d685c7b446cd00"
   integrity sha512-i6dHe3EyLjMmDlU1/bGQpEw25XSjkJULPuAVKCbNRefQVq48yXKUpwg538F7AZTf9kyr57zj++pQFltUa5H7yA==
@@ -9706,7 +9712,7 @@ webpack-serve@^1.0.4:
     webpack-hot-client "^3.0.0"
     webpack-log "^1.1.2"
 
-webpack-sources@^1.1.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0:
+webpack-sources@^1.1.0, webpack-sources@^1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.1.tgz#b91b2c5b1c4e890ff50d1d35b7fa3657040da1da"
   integrity sha512-XSz38193PTo/1csJabKaV4b53uRVotlMgqJXm3s3eje0Bu6gQTxYDqpD38CmQfDBA+gN+QqaGjasuC8I/7eW3Q==
@@ -9714,34 +9720,42 @@ webpack-sources@^1.1.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.16.5:
-  version "4.38.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.38.0.tgz#6d77108404b08883c78f4e7e45a43c4e5c47c931"
-  integrity sha512-lbuFsVOq8PZY+1Ytz/mYOvYOo+d4IJ31hHk/7iyoeWtwN33V+5HYotSH+UIb9tq914ey0Hot7z6HugD+je3sWw==
+webpack-sources@^1.4.1:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
+  integrity sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==
+  dependencies:
+    source-list-map "^2.0.0"
+    source-map "~0.6.1"
+
+webpack@4.39.3:
+  version "4.39.3"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.39.3.tgz#a02179d1032156b713b6ec2da7e0df9d037def50"
+  integrity sha512-BXSI9M211JyCVc3JxHWDpze85CvjC842EvpRsVTc/d15YJGlox7GIDd38kJgWrb3ZluyvIjgenbLDMBQPDcxYQ==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
     "@webassemblyjs/wasm-edit" "1.8.5"
     "@webassemblyjs/wasm-parser" "1.8.5"
-    acorn "^6.2.0"
-    ajv "^6.1.0"
-    ajv-keywords "^3.1.0"
-    chrome-trace-event "^1.0.0"
+    acorn "^6.2.1"
+    ajv "^6.10.2"
+    ajv-keywords "^3.4.1"
+    chrome-trace-event "^1.0.2"
     enhanced-resolve "^4.1.0"
-    eslint-scope "^4.0.0"
+    eslint-scope "^4.0.3"
     json-parse-better-errors "^1.0.2"
-    loader-runner "^2.3.0"
-    loader-utils "^1.1.0"
-    memory-fs "~0.4.1"
-    micromatch "^3.1.8"
-    mkdirp "~0.5.0"
-    neo-async "^2.5.0"
-    node-libs-browser "^2.0.0"
+    loader-runner "^2.4.0"
+    loader-utils "^1.2.3"
+    memory-fs "^0.4.1"
+    micromatch "^3.1.10"
+    mkdirp "^0.5.1"
+    neo-async "^2.6.1"
+    node-libs-browser "^2.2.1"
     schema-utils "^1.0.0"
-    tapable "^1.1.0"
-    terser-webpack-plugin "^1.1.0"
-    watchpack "^1.5.0"
-    webpack-sources "^1.3.0"
+    tapable "^1.1.3"
+    terser-webpack-plugin "^1.4.1"
+    watchpack "^1.6.0"
+    webpack-sources "^1.4.1"
 
 whatwg-fetch@3.0.0, whatwg-fetch@>=0.10.0:
   version "3.0.0"
