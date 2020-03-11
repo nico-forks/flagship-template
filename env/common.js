@@ -63,10 +63,10 @@ module.exports = {
   apiHost: 'https://api.example.com',
   require: [],
   engagement: {
-    baseURL: 'https://kong.uat.bbhosted.com/engagement/v1',
+    baseURL: 'https://api.brandingbrand.com/engagement-general/v1',
     cacheTTL: 0,
-    appId: '302891af-778a-46aa-abdc-7297e72a1809',
-    apiKey: 'f3e1a902963f3364980b31e7ad0ea4'
+    appId: '31c51c2f-e65c-4b14-8edc-026dc6098e56',
+    apiKey: 'uWFd0FJ6TcrqFBCFMbd2TUs686K3Ii'
   },
   usageDescriptionIOS: [
     {

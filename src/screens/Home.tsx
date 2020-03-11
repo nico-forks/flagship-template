@@ -26,12 +26,12 @@ export class Home extends Component<HomeProps> {
     const json = {
       private_type: 'feed',
       storyGradient: {
-        enabled: true,
+        enabled: false,
         startFadePosition: 50,
         endFadePosition: 300
       },
       empty: {
-        message: 'Loading...',
+        message: 'Loading Inbox...',
         textStyle: {
           color: '#524c48',
           padding: 30,
@@ -44,7 +44,7 @@ export class Home extends Component<HomeProps> {
 
     return (
       <PSScreenWrapper
-        needInSafeArea={true}
+        needInSafeArea={false}
         navigator={this.props.navigator}
         scroll={false}
         hideGlobalBanner={true}
@@ -53,6 +53,8 @@ export class Home extends Component<HomeProps> {
           navigator={this.props.navigator}
           refreshControl={this.refreshInbox}
           isLoading={this.props.isLoading}
+          welcomeHeader={true}
+          headerName={'Brander'}
           json={json}
         />
       </PSScreenWrapper>
@@ -69,13 +71,7 @@ const mapDispatchToProps = (dispatch: any, ownProps: any) => {
   };
 };
 const mapStateToProps = (combinedStore: CombinedStore, ownProps: any) => {
-  const stories = combinedStore.inbox.value || [];
-  // always put logo story on top
-  const logoStory = stories.filter((message: DiscoveryMessage) =>
-    message.id === '20b108cb-58e7-42aa-807e-a6588cfe6354');
-  const restStories = stories.filter((message: DiscoveryMessage) =>
-    message.id !== '20b108cb-58e7-42aa-807e-a6588cfe6354');
-  const orderedStories = [...logoStory, ...restStories].map((message: DiscoveryMessage) => {
+  const transformedStories = (combinedStore.inbox.value || []).map((message: DiscoveryMessage) => {
     return {
       name: message.title,
       id: message.id,
@@ -83,7 +79,7 @@ const mapStateToProps = (combinedStore: CombinedStore, ownProps: any) => {
     };
   });
   return {
-    stories: orderedStories,
+    stories: transformedStories,
     isLoading: combinedStore.inbox.loading
   };
 };
