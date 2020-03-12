@@ -6,6 +6,8 @@ interface EngagementProps {
   refreshControl: any;
   isLoading: any;
   json: any;
+  welcomeHeader?: boolean;
+  headerName?: string;
 }
 
 export class EngagementComp extends Component<EngagementProps> {
